@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchFragment">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tiSearchDepLoc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/searchByDepLoc"
+        android:layout_marginHorizontal="16dp"
+        app:boxBackgroundColor="#00FFFFFF"
+        app:boxStrokeColor="@color/primary"
+        app:boxStrokeWidth="1dp"
+        app:boxStrokeWidthFocused="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/tiSearchArrLoc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:startIconDrawable="@drawable/arrival_flag"
+        app:startIconTint="@color/secondary_text">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etSearchDepLoc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tiSearchArrLoc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/searchByArrLoc"
+        android:layout_marginHorizontal="16dp"
+        app:boxBackgroundColor="#00FFFFFF"
+        app:boxStrokeColor="@color/primary"
+        app:boxStrokeWidth="1dp"
+        app:boxStrokeWidthFocused="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/tiSearchDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tiSearchDepLoc"
+        app:startIconDrawable="@drawable/arrival_flag"
+        app:startIconTint="@color/secondary_text">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etSearchArrLoc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tiSearchDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/searchByDate"
+        android:layout_marginHorizontal="16dp"
+        app:boxBackgroundColor="#00FFFFFF"
+        app:boxStrokeColor="@color/primary"
+        app:boxStrokeWidth="1dp"
+        app:boxStrokeWidthFocused="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/tiSearchDepTimeMax"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tiSearchArrLoc"
+        app:startIconDrawable="@drawable/calendar_icon"
+        app:startIconTint="@color/secondary_text">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etSearchDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="false"
+            android:fontFamily="@font/roboto" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tiSearchDepTimeMin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/pickTime"
+        android:layout_marginHorizontal="16dp"
+        app:boxBackgroundColor="#00FFFFFF"
+        app:boxStrokeColor="@color/primary"
+        app:boxStrokeWidth="1dp"
+        app:boxStrokeWidthFocused="2dp"
+        app:helperText="@string/searchByDepTimeMin"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tiSearchDepTimeMax"
+        app:layout_constraintEnd_toStartOf="@+id/tiSearchDepTimeMax"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:startIconDrawable="@drawable/time_icon"
+        app:startIconTint="@color/secondary_text">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etSearchDepTimeMin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="false"
+            android:fontFamily="@font/roboto" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tiSearchDepTimeMax"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/pickTime"
+        android:layout_marginHorizontal="16dp"
+        app:boxBackgroundColor="#00FFFFFF"
+        app:boxStrokeColor="@color/primary"
+        app:boxStrokeWidth="1dp"
+        app:boxStrokeWidthFocused="2dp"
+        app:helperText="@string/searchByDepTimeMax"
+        app:layout_constraintBottom_toTopOf="@+id/tiSearchArrTimeMax"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tiSearchDepTimeMin"
+        app:layout_constraintTop_toBottomOf="@+id/tiSearchDate"
+        app:startIconDrawable="@drawable/time_icon"
+        app:startIconTint="@color/secondary_text">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etSearchDepTimeMax"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="false"
+            android:fontFamily="@font/roboto" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tiSearchArrTimeMin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/pickTime"
+        android:layout_marginHorizontal="16dp"
+        app:boxBackgroundColor="#00FFFFFF"
+        app:boxStrokeColor="@color/primary"
+        app:boxStrokeWidth="1dp"
+        app:boxStrokeWidthFocused="2dp"
+        app:helperText="@string/searchByArrTimeMin"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tiSearchArrTimeMax"
+        app:layout_constraintEnd_toStartOf="@+id/tiSearchArrTimeMax"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:startIconDrawable="@drawable/time_icon"
+        app:startIconTint="@color/secondary_text">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etSearchArrTimeMin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="false"
+            android:fontFamily="@font/roboto" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tiSearchArrTimeMax"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/pickTime"
+        android:layout_marginHorizontal="16dp"
+        app:boxBackgroundColor="#00FFFFFF"
+        app:boxStrokeColor="@color/primary"
+        app:boxStrokeWidth="1dp"
+        app:boxStrokeWidthFocused="2dp"
+        app:helperText="@string/searchByArrTimeMax"
+        app:layout_constraintBottom_toTopOf="@+id/tiSearchPriceMax"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tiSearchArrTimeMin"
+        app:layout_constraintTop_toBottomOf="@+id/tiSearchDepTimeMax"
+        app:startIconDrawable="@drawable/time_icon"
+        app:startIconTint="@color/secondary_text">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etSearchArrTimeMax"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="false"
+            android:fontFamily="@font/roboto" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tiSearchPriceMin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:boxBackgroundColor="#00FFFFFF"
+        app:boxCollapsedPaddingTop="0dp"
+        android:layout_marginHorizontal="16dp"
+        app:boxStrokeColor="@color/primary"
+        app:boxStrokeWidth="1dp"
+        app:boxStrokeWidthFocused="2dp"
+        app:helperText="@string/minPrice"
+        app:hintEnabled="false"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tiSearchPriceMax"
+        app:layout_constraintEnd_toStartOf="@+id/tiSearchPriceMax"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:startIconDrawable="@drawable/euro_icon">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etSearchPriceMin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawablePadding="-8dp"
+            android:fontFamily="@font/roboto"
+            android:hint="@string/priceExample"
+            android:inputType="numberDecimal"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:textSize="22sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tiSearchPriceMax"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:boxBackgroundColor="#00FFFFFF"
+        app:boxCollapsedPaddingTop="0dp"
+        android:layout_marginHorizontal="16dp"
+        app:boxStrokeColor="@color/primary"
+        app:boxStrokeWidth="1dp"
+        app:boxStrokeWidthFocused="2dp"
+        app:helperText="@string/maxPrice"
+        app:hintEnabled="false"
+        app:layout_constraintBottom_toTopOf="@+id/searchSubmitButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tiSearchPriceMin"
+        app:layout_constraintTop_toBottomOf="@+id/tiSearchArrTimeMax"
+        app:startIconDrawable="@drawable/euro_icon">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etSearchPriceMax"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawablePadding="-8dp"
+            android:fontFamily="@font/roboto"
+            android:hint="@string/priceExampleMax"
+            android:inputType="numberDecimal"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:textSize="22sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/searchSubmitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/submitSearch"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tiSearchPriceMax" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

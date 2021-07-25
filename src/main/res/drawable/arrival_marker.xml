@@ -1,0 +1,21 @@
+<vector android:height="48dp" android:viewportHeight="490"
+    android:viewportWidth="490" android:width="48dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="#FFFFFF" android:pathData="M345,10h70v65h-70z"/>
+    <path android:fillColor="#FFFFFF" android:pathData="M345,135h70v60h-70z"/>
+    <path android:fillColor="#FFFFFF" android:pathData="M265,75h80v60h-80z"/>
+    <path android:fillColor="#FFFFFF" android:pathData="M265,195h80v65h-80z"/>
+    <path android:fillColor="#FFFFFF" android:pathData="M185,10h80v65h-80z"/>
+    <path android:fillColor="#FFFFFF" android:pathData="M115,195h70v65h-70z"/>
+    <path android:fillColor="#FFFFFF" android:pathData="M185,135h80v60h-80z"/>
+    <path android:fillColor="#FFFFFF" android:pathData="M115,75h70v60h-70z"/>
+    <path android:fillColor="#3B3F43" android:pathData="M345,195h70v65h-70z"/>
+    <path android:fillColor="#3B3F43" android:pathData="M185,195h80v65h-80z"/>
+    <path android:fillColor="#3B3F43" android:pathData="M265,135h80v60h-80z"/>
+    <path android:fillColor="#3B3F43" android:pathData="M115,135h70v60h-70z"/>
+    <path android:fillColor="#3B3F43" android:pathData="M345,75h70v60h-70z"/>
+    <path android:fillColor="#3B3F43" android:pathData="M265,10h80v65h-80z"/>
+    <path android:fillColor="#3B3F43" android:pathData="M185,75h80v60h-80z"/>
+    <path android:fillColor="#3B3F43" android:pathData="M115,10h70v65h-70z"/>
+    <path android:fillColor="#AFB6BB" android:pathData="M115,260l0,220l-40,0l0,-470l40,0l0,65l0,60l0,60z"/>
+    <path android:fillColor="#231F20" android:pathData="M415,0H75c-5.523,0 -10,4.477 -10,10v470c0,5.522 4.477,10 10,10h40c5.523,0 10,-4.478 10,-10V270h290c5.523,0 10,-4.478 10,-10V10C425,4.477 420.523,0 415,0zM405,65h-50V20h50V65zM275,65V20h60v45H275zM335,85v40h-60V85H335zM255,65h-60V20h60V65zM255,85v40h-60V85H255zM175,125h-50V85h50V125zM125,145h50v40h-50V145zM195,145h60v40h-60V145zM255,205v45h-60v-45H255zM275,205h60v45h-60V205zM275,185v-40h60v40H275zM355,145h50v40h-50V145zM355,125V85h50v40H355zM175,20v45h-50V20H175zM105,470H85V20h20V470zM125,205h50v45h-50V205zM355,250v-45h50v45H355z"/>
+</vector>

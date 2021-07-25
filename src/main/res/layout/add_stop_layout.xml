@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_scrollFlags="noScroll">
+
+    <View
+        android:id="@+id/lineStop"
+        android:layout_width="1dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginLeft="39dp"
+        android:background="@color/secondary_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tiStop"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:hint="@string/newStop"
+        android:textColorHint="@color/secondary_text"
+        app:boxBackgroundColor="#00FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineStop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:startIconDrawable="@drawable/place_icon"
+        app:startIconTint="@color/secondary_text">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etStop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="16dp"
+            android:fontFamily="@font/roboto"
+            android:textSize="14sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tiStopTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:hint="@string/stopTime"
+        android:paddingStart="-8dp"
+        android:paddingLeft="-8dp"
+        android:paddingEnd="0dp"
+        android:paddingRight="0dp"
+        android:textColorHint="@color/secondary_text"
+        app:boxBackgroundColor="#00FFFFFF"
+        app:errorEnabled="false"
+        app:layout_constraintBottom_toBottomOf="@+id/tiStop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guidelineStop"
+        app:startIconDrawable="@drawable/time_icon"
+        app:startIconTint="@color/secondary_text">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etStopTime"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawablePadding="-8dp"
+            android:fontFamily="@font/roboto"
+            android:inputType="time"
+            android:textSize="14sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.66" />
+
+    <View
+        android:id="@+id/lineStop2"
+        android:layout_width="1dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginLeft="39dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/secondary_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tiStop" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

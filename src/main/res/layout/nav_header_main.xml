@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navHeader"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/nav_header_height"
+    android:background="@color/primary"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/carImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="false"
+        android:contentDescription="@string/ivContentDesc"
+        android:cropToPadding="false"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/userName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@color/primary"
+        tools:srcCompat="@color/primary" />
+
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:paddingTop="@dimen/nav_header_vertical_spacing"
+        android:shadowColor="#000000"
+        android:shadowRadius="4"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="@color/icons"
+        android:textColorHighlight="@color/primary_light"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/userMail"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Username" />
+
+    <TextView
+        android:id="@+id/userMail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:shadowColor="#000000"
+        android:shadowRadius="4"
+        android:textColor="@color/icons"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="email" />
+
+    <ImageButton
+        android:id="@+id/logout"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@color/accent"
+        android:contentDescription="@string/logout"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_logout"
+        android:tint="@color/icons"
+        android:visibility="visible"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:src="@drawable/ic_logout"
+        tools:visibility="visible" />
+</androidx.constraintlayout.widget.ConstraintLayout>

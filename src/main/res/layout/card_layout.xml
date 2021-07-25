@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:clickable="true"
+        android:focusable="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:id="@+id/card_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:padding="16dp"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/card_button_modify"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Mar 20 Aprile 2021"
+                    android:layout_marginStart="8dp" />
+
+                <ImageButton
+                    android:id="@+id/card_button_modify"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="10"
+                    android:contentDescription="@string/editTrip"
+                    android:src="@drawable/ic_pencil_icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginEnd="8dp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <!-- Media -->
+            <ImageView
+                android:id="@+id/card_img"
+                android:layout_width="148dp"
+                android:layout_height="148dp"
+                android:layout_gravity="center"
+                android:contentDescription="@string/ivContentDesc"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/carimage"
+                tools:srcCompat="@drawable/carimage" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/card_dep_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/depLoc"
+                        android:textAppearance="?attr/textAppearanceSubtitle2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/card_dep"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="32dp"
+                        android:fontFamily="@font/roboto"
+                        android:textAppearance="?attr/textAppearanceBody2"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/card_dep_time"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/card_dep_title"
+                        tools:text="Politecnico di Torino\nCorso Duca degli Abruzzi, 666\n10100 Torino TO" />
+
+                    <TextView
+                        android:id="@+id/card_dep_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="8dp"
+                        android:textAppearance="?attr/textAppearanceBody2"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="23:59"
+                        app:drawableLeftCompat="@drawable/time_icon" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp">
+
+
+                    <TextView
+                        android:id="@+id/card_arr_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/arrLoc"
+                        android:textAppearance="?attr/textAppearanceSubtitle2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/card_arr"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="32dp"
+                        android:fontFamily="@font/roboto"
+                        android:textAppearance="?attr/textAppearanceBody2"
+                        app:layout_constraintEnd_toStartOf="@+id/card_arr_time"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/card_arr_title"
+                        tools:text="Politecnico di Milano\nCorso Milano, 666\n20200 Milano MI" />
+
+                    <TextView
+                        android:id="@+id/card_arr_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="8dp"
+                        android:textAppearance="?attr/textAppearanceBody2"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="13:00"
+                        app:drawableLeftCompat="@drawable/time_icon" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        android:id="@+id/card_dur_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/duration"
+                        android:textAppearance="?attr/textAppearanceSubtitle2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/card_dur"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:fontFamily="@font/roboto"
+                        android:textAppearance="?attr/textAppearanceBody2"
+                        app:layout_constraintBottom_toBottomOf="@id/card_dur_title"
+                        app:layout_constraintStart_toEndOf="@id/card_dur_title"
+                        app:layout_constraintTop_toTopOf="@id/card_dur_title"
+                        tools:text="12h 59m" />
+
+                    <TextView
+                        android:id="@+id/card_seats_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/seats"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/card_dur_title" />
+
+                    <TextView
+                        android:id="@+id/card_seats"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:fontFamily="@font/roboto"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                        app:layout_constraintBottom_toBottomOf="@id/card_seats_title"
+                        app:layout_constraintStart_toEndOf="@id/card_seats_title"
+                        app:layout_constraintTop_toTopOf="@id/card_seats_title"
+                        tools:text="5" />
+
+                    <TextView
+                        android:id="@+id/card_price_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/price"
+                        android:textAppearance="?attr/textAppearanceSubtitle2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/card_seats_title" />
+
+                    <TextView
+                        android:id="@+id/card_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:fontFamily="@font/roboto"
+                        android:textAppearance="?attr/textAppearanceBody2"
+                        app:layout_constraintBottom_toBottomOf="@id/card_price_title"
+                        app:layout_constraintStart_toEndOf="@id/card_price_title"
+                        app:layout_constraintTop_toTopOf="@id/card_price_title"
+                        tools:text="€ 10.00" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

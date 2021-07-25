@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lacinia turpis lacus. Vivamus a nulla lobortis, efficitur nulla nec, blandit nisi. Integer urna sapien, lobortis et lacus vel, malesuada maximus urna. In diam est, laoreet a justo fermentum, tempor dictum velit. Maecenas accumsan nibh lacus, sed sodales odio congue vitae. Suspendisse augue orci, malesuada sit amet suscipit vel, ultricies id metus. Praesent nec sapien nisl. Mauris at leo volutpat, elementum nisi ullamcorper, tincidunt ex." />
+
+    <RatingBar
+        android:id="@+id/rating"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginVertical="8dp"
+        android:isIndicator="true"
+        app:layout_constraintBottom_toBottomOf="@+id/lineStop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/lineStop" />
+
+    <View
+        android:id="@+id/lineStop"
+        android:layout_width="8dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="8dp"
+        android:background="@color/secondary_text"
+        app:layout_constraintBottom_toBottomOf="@+id/tvAuthor"
+        app:layout_constraintStart_toEndOf="@+id/rating"
+        app:layout_constraintTop_toTopOf="@+id/tvAuthor" />
+
+    <TextView
+        android:id="@+id/tvAuthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lineStop"
+        app:layout_constraintTop_toBottomOf="@+id/tvMessage"
+        tools:text="Author" />
+</androidx.constraintlayout.widget.ConstraintLayout>

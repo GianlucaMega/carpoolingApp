@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_others_list"
+            android:icon="@drawable/car"
+            android:title="@string/othersTrips" />
+        <item
+            android:id="@+id/nav_trip_list"
+            android:icon="@drawable/car"
+            android:title="@string/trips" />
+        <item
+            android:id="@+id/nav_interesting_list"
+            android:icon="@drawable/ic_bookmark"
+            android:title="@string/interestingTrips" />
+        <item
+            android:id="@+id/nav_bought_list"
+            android:icon="@drawable/ic_history"
+            android:title="@string/boughtTrips" />
+        <item
+            android:id="@+id/nav_show_profile"
+            android:icon="@drawable/account"
+            android:title="@string/menu_profile" />
+    </group>
+</menu>
