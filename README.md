@@ -1,4 +1,5 @@
-# CarpoolingApp
+# Carpooling App
+Authors: Mega Gianluca (s280109@studenti.polito.it), Panduri Santa (s280155@studenti.polito.it), Pappadà Matteo (s278078@studenti.polito.it), Zilli Cristian (s279002@studenti.polito.it). <br>
 Carpooling App made for the Mobile Applications Development course of the Cybersecurity Polito Master's Degree.
 
 ## Contents
